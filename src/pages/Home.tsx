@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { useState } from "react";
 import { useCart } from "../pages/CartContext"; // Import useCart
+import { RefreshCcw, ShieldCheck, Truck } from "lucide-react";
 
 const bestSellers = [
   {
@@ -49,7 +50,7 @@ export default function Home() {
   const { addToCart } = useCart(); // Access addToCart from CartContext
 
   return (
-    <div className="bg-clay min-h-screen w-full px-6 py-16 font-sans">
+    <><div className="bg-clay min-h-screen w-full px-6 py-16 font-sans">
       <motion.div
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
@@ -86,8 +87,7 @@ export default function Home() {
             onClick={() => setActiveTab(tab as "Best Sellers" | "New Arrivals")}
             className={`px-4 py-2 border-b-2 font-light transition-all ${activeTab === tab
               ? "border-divina text-divina"
-              : "border-transparent text-rosewood hover:text-divina"
-              }`}
+              : "border-transparent text-rosewood hover:text-divina"}`}
           >
             {tab}
           </button>
@@ -106,8 +106,7 @@ export default function Home() {
             <img
               src={item.image}
               alt={item.name}
-              className="rounded-lg w-full h-60 object-cover mb-4"
-            />
+              className="rounded-lg w-full h-60 object-cover mb-4" />
             <p className="text-red-500 text-sm mb-1">{item.details}</p>
             <h3 className="text-lg font-semibold text-divina font-serif">{item.name}</h3>
             <p className="text-rosewood">{item.price}</p>
@@ -134,63 +133,60 @@ export default function Home() {
         </p>
 
         <div className="flex items-center">
-      <img
-        src="https://gunisigikitapligi.com/wp-content/uploads/2025/04/david-almond.jpg" // Öneri: profil fotoğrafı ekle veya placeholder kullan (örneğin: https://i.pravatar.cc/40)
-        alt="David Hoke"
-        className="w-10 h-10 rounded-full mr-3"
-      />
-      <div>
-        <p className="text-gray-900 font-semibold">David Hoke</p>
-        <p className="text-gray-500 text-sm">Verified Buyer</p>
+          <img
+            src="https://gunisigikitapligi.com/wp-content/uploads/2025/04/david-almond.jpg" // Öneri: profil fotoğrafı ekle veya placeholder kullan (örneğin: https://i.pravatar.cc/40)
+            alt="David Hoke"
+            className="w-10 h-10 rounded-full mr-3" />
+          <div>
+            <p className="text-gray-900 font-semibold">David Hoke</p>
+            <p className="text-gray-500 text-sm">Verified Buyer</p>
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
-</div>
-<div className="mt-20 px-6 max-w-3xl mx-auto">
-  <h2 className="text-2xl font-serif text-divina mb-6 text-center">
-    Why Shop with Divina?
-  </h2>
+    </div><div className="mt-20 px-6 max-w-3xl mx-auto">
+        <h2 className="text-2xl font-serif text-divina mb-6 text-center">
+          Why Shop with Divina?
+        </h2>
 
-  <div className="space-y-6">
-    {/* Certified Products */}
-    <div className="flex items-start space-x-4">
-      <ShieldCheck className="text-emerald-600 w-6 h-6 mt-1" />
-      <div>
-        <p className="font-semibold text-divina text-lg">Certified Products You Can Trust</p>
-        <p className="text-rosewood text-sm">
-          All our items come with official certification for authenticity and quality.
-        </p>
-      </div>
-    </div>
-    <hr />
+        <div className="space-y-6">
+          {/* Certified Products */}
+          <div className="flex items-start space-x-4">
+            <ShieldCheck className="text-emerald-600 w-6 h-6 mt-1" />
+            <div>
+              <p className="font-semibold text-divina text-lg">Certified Products You Can Trust</p>
+              <p className="text-rosewood text-sm">
+                All our items come with official certification for authenticity and quality.
+              </p>
+            </div>
+          </div>
+          <hr />
 
-    {/* Free Shipping */}
-    <div className="flex items-start space-x-4">
-      <Truck className="text-emerald-600 w-6 h-6 mt-1" />
-      <div>
-        <p className="font-semibold text-divina text-lg">Free & Insured Shipping</p>
-        <p className="text-rosewood text-sm">
-          We deliver your orders with free and insured shipping for peace of mind.
-        </p>
-      </div>
-    </div>
-    <hr />
+          {/* Free Shipping */}
+          <div className="flex items-start space-x-4">
+            <Truck className="text-emerald-600 w-6 h-6 mt-1" />
+            <div>
+              <p className="font-semibold text-divina text-lg">Free & Insured Shipping</p>
+              <p className="text-rosewood text-sm">
+                We deliver your orders with free and insured shipping for peace of mind.
+              </p>
+            </div>
+          </div>
+          <hr />
 
-    {/* Easy Return */}
-    <div className="flex items-start space-x-4">
-      <RefreshCcw className="text-emerald-600 w-6 h-6 mt-1" />
-      <div>
-        <p className="font-semibold text-divina text-lg">Easy Return & Exchange Guarantee</p>
-        <p className="text-rosewood text-sm">
-          Enjoy hassle-free returns or exchanges within 14 days of your purchase.
-        </p>
-      </div>
-    </div>
-  </div>
-</div>
+          {/* Easy Return */}
+          <div className="flex items-start space-x-4">
+            <RefreshCcw className="text-emerald-600 w-6 h-6 mt-1" />
+            <div>
+              <p className="font-semibold text-divina text-lg">Easy Return & Exchange Guarantee</p>
+              <p className="text-rosewood text-sm">
+                Enjoy hassle-free returns or exchanges within 14 days of your purchase.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div></>
         
       
-      </div>
-    </div>
+      
   );
 }
