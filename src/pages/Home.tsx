@@ -50,7 +50,7 @@ export default function Home() {
   const { addToCart } = useCart(); // Access addToCart from CartContext
 
   return (
-    <><div className="bg-clay min-h-screen w-full px-6 py-16 font-sans">
+   <div className="bg-clay min-h-screen w-full px-6 py-16 font-sans">
       <motion.div
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
@@ -132,59 +132,83 @@ export default function Home() {
           </span>
         </p>
 
-        <div className="flex items-center">
-          <img
-            src="https://gunisigikitapligi.com/wp-content/uploads/2025/04/david-almond.jpg" // Öneri: profil fotoğrafı ekle veya placeholder kullan (örneğin: https://i.pravatar.cc/40)
-            alt="David Hoke"
-            className="w-10 h-10 rounded-full mr-3" />
-          <div>
-            <p className="text-gray-900 font-semibold">David Hoke</p>
-            <p className="text-gray-500 text-sm">Verified Buyer</p>
-          </div>
-        </div>
+        <div className="bg-white rounded-2xl shadow-lg p-6 max-w-2xl w-full">
+    <div className="flex items-center mb-3">
+      {/* 5 stars */}
+      {Array.from({ length: 5 }).map((_, i) => (
+        <svg
+          key={i}
+          xmlns="http://www.w3.org/2000/svg"
+          fill="#FBBF24" // Tailwind yellow-400
+          className="w-5 h-5 mr-1"
+          viewBox="0 0 24 24"
+        >
+          <path d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.896 1.44 8.298L12 18.896l-7.376 4.604 1.44-8.298L0 9.306l8.332-1.151z" />
+        </svg>
+      ))}
+    </div>
+
+    <p className="text-gray-800 text-lg leading-relaxed mb-4">
+      Divina’s craftsmanship exceeded my expectations. Every detail is stunning, and the elegance of the design speaks for itself.
+    </p>
+
+    <div className="flex items-center">
+      <img
+        src="https://gunisigikitapligi.com/wp-content/uploads/2025/04/david-almond.jpg" // Öneri: profil fotoğrafı ekle veya placeholder kullan (örneğin: https://i.pravatar.cc/40)
+        alt="David Hoke"
+        className="w-10 h-10 rounded-full mr-3"
+      />
+      <div>
+        <p className="text-gray-900 font-semibold">David Hoke</p>
+        <p className="text-gray-500 text-sm">Verified Buyer</p>
       </div>
-    </div><div className="mt-20 px-6 max-w-3xl mx-auto">
-        <h2 className="text-2xl font-serif text-divina mb-6 text-center">
-          Why Shop with Divina?
-        </h2>
+    </div>
+  </div>
+</div>
+<div className="mt-20 px-6 max-w-3xl mx-auto">
+  <h2 className="text-2xl font-serif text-divina mb-6 text-center">
+    Why Shop with Divina?
+  </h2>
 
-        <div className="space-y-6">
-          {/* Certified Products */}
-          <div className="flex items-start space-x-4">
-            <ShieldCheck className="text-emerald-600 w-6 h-6 mt-1" />
-            <div>
-              <p className="font-semibold text-divina text-lg">Certified Products You Can Trust</p>
-              <p className="text-rosewood text-sm">
-                All our items come with official certification for authenticity and quality.
-              </p>
-            </div>
-          </div>
-          <hr />
+  <div className="space-y-6">
+    {/* Certified Products */}
+    <div className="flex items-start space-x-4">
+      <ShieldCheck className="text-emerald-600 w-6 h-6 mt-1" />
+      <div>
+        <p className="font-semibold text-divina text-lg">Certified Products You Can Trust</p>
+        <p className="text-rosewood text-sm">
+          All our items come with official certification for authenticity and quality.
+        </p>
+      </div>
+    </div>
+    <hr />
 
-          {/* Free Shipping */}
-          <div className="flex items-start space-x-4">
-            <Truck className="text-emerald-600 w-6 h-6 mt-1" />
-            <div>
-              <p className="font-semibold text-divina text-lg">Free & Insured Shipping</p>
-              <p className="text-rosewood text-sm">
-                We deliver your orders with free and insured shipping for peace of mind.
-              </p>
-            </div>
-          </div>
-          <hr />
+    {/* Free Shipping */}
+    <div className="flex items-start space-x-4">
+      <Truck className="text-emerald-600 w-6 h-6 mt-1" />
+      <div>
+        <p className="font-semibold text-divina text-lg">Free & Insured Shipping</p>
+        <p className="text-rosewood text-sm">
+          We deliver your orders with free and insured shipping for peace of mind.
+        </p>
+      </div>
+    </div>
+    <hr />
 
-          {/* Easy Return */}
-          <div className="flex items-start space-x-4">
-            <RefreshCcw className="text-emerald-600 w-6 h-6 mt-1" />
-            <div>
-              <p className="font-semibold text-divina text-lg">Easy Return & Exchange Guarantee</p>
-              <p className="text-rosewood text-sm">
-                Enjoy hassle-free returns or exchanges within 14 days of your purchase.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div></>
+    {/* Easy Return */}
+    <div className="flex items-start space-x-4">
+      <RefreshCcw className="text-emerald-600 w-6 h-6 mt-1" />
+      <div>
+        <p className="font-semibold text-divina text-lg">Easy Return & Exchange Guarantee</p>
+        <p className="text-rosewood text-sm">
+          Enjoy hassle-free returns or exchanges within 14 days of your purchase.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+</div>
         
       
       
