@@ -133,44 +133,63 @@ export default function Home() {
           </span>
         </p>
 
-        {/* Download the App Section */}
-        <div className="mt-12">
-          <h2 className="text-2xl font-serif text-divina mb-6">Download Our App</h2>
-          <p className="text-rosewood text-sm mb-6">
-            Shop on the go and stay connected with Divina. Download our app today!
-          </p>
-          <div className="flex justify-center gap-4">
-            {/* App Store Button */}
-            <a
-              href="https://www.apple.com/app-store/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center px-4 py-2 bg-black text-white rounded-lg shadow-md hover:bg-gray-800 transition-colors"
-            >
-              <img
-                src="../../../public/images/appstore.png"
-                alt="Download on the App Store"
-                className="w-6 h-6 mr-2"
-              />
-              <span className="text-sm font-medium">Download on the App Store</span>
-            </a>
+        <div className="flex items-center">
+      <img
+        src="https://gunisigikitapligi.com/wp-content/uploads/2025/04/david-almond.jpg" // Öneri: profil fotoğrafı ekle veya placeholder kullan (örneğin: https://i.pravatar.cc/40)
+        alt="David Hoke"
+        className="w-10 h-10 rounded-full mr-3"
+      />
+      <div>
+        <p className="text-gray-900 font-semibold">David Hoke</p>
+        <p className="text-gray-500 text-sm">Verified Buyer</p>
+      </div>
+    </div>
+  </div>
+</div>
+<div className="mt-20 px-6 max-w-3xl mx-auto">
+  <h2 className="text-2xl font-serif text-divina mb-6 text-center">
+    Why Shop with Divina?
+  </h2>
 
-            {/* Google Play Button */}
-            <a
-              href="https://play.google.com/store"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center px-4 py-2 bg-black text-white rounded-lg shadow-md hover:bg-gray-800 transition-colors"
-            >
-              <img
-                src="../../../public/images/googleplay.png"
-                alt="Get it on Google Play"
-                className="w-12 h-12 mr-2" // Increased size to w-8 h-8
-              />
-              <span className="text-sm font-medium">Get it on Google Play</span>
-            </a>
-          </div>
-        </div>
+  <div className="space-y-6">
+    {/* Certified Products */}
+    <div className="flex items-start space-x-4">
+      <ShieldCheck className="text-emerald-600 w-6 h-6 mt-1" />
+      <div>
+        <p className="font-semibold text-divina text-lg">Certified Products You Can Trust</p>
+        <p className="text-rosewood text-sm">
+          All our items come with official certification for authenticity and quality.
+        </p>
+      </div>
+    </div>
+    <hr />
+
+    {/* Free Shipping */}
+    <div className="flex items-start space-x-4">
+      <Truck className="text-emerald-600 w-6 h-6 mt-1" />
+      <div>
+        <p className="font-semibold text-divina text-lg">Free & Insured Shipping</p>
+        <p className="text-rosewood text-sm">
+          We deliver your orders with free and insured shipping for peace of mind.
+        </p>
+      </div>
+    </div>
+    <hr />
+
+    {/* Easy Return */}
+    <div className="flex items-start space-x-4">
+      <RefreshCcw className="text-emerald-600 w-6 h-6 mt-1" />
+      <div>
+        <p className="font-semibold text-divina text-lg">Easy Return & Exchange Guarantee</p>
+        <p className="text-rosewood text-sm">
+          Enjoy hassle-free returns or exchanges within 14 days of your purchase.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      
       </div>
     </div>
   );
